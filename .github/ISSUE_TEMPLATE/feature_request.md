@@ -1,6 +1,10 @@
-| **Name**        | **About**              | **Title**   | **Labels**                        | **Assignees** |
-|-----------------|------------------------|-------------|-----------------------------------|---------------|
-| Feature request | Suggest a feature or idea | (Empty)     | ✨ feature, 🚨 needs approval | (Empty)       |
+---
+name: Feature request
+about: Suggest a feature or idea
+title: ""
+labels: ["✨ feature", "🚨 needs approval"]
+assignees: ""
+---
 
 
 ### Is your proposal related to a problem?
