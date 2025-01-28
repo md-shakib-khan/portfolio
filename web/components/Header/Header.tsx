@@ -16,7 +16,7 @@ export default function Header() {
               height={30}
               className="transition duration-500  blur-0 scale-100 rounded-full "
             />
-            <span className="font-inter font-bold">Shakib Khan</span>
+            <span className="font-inter font-bold">MD Shakib Khan</span>
           </Link>
           <Link href={"/about"} className="text-white text-sm relative">
             <span className="relative z-10 px-2 py-2 inline-block">About</span>
