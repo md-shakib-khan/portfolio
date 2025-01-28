@@ -1,6 +1,10 @@
-| **Name**     | **About**      | **Title**   | **Labels**  | **Assignees** |
-|--------------|----------------|-------------|-------------|---------------|
-| Bug report | Report any issues with the platform | (Empty) | 🐛 bug | (Empty)       |
+---
+name: Bug report
+about: Report any issues with the platform
+title: ""
+labels: ["🐛 bug"]
+assignees: ""
+---
 
 
 Found a bug? Please fill out the sections below. 👍
