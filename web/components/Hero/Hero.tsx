@@ -33,29 +33,33 @@ export default function Hero() {
         />
         <div className="flex flex-row justify-start md:justify-center space-x-2 mt-2">
           <a
+            target="_blank"
             className="text-zinc-500 text-sm relative"
             href="https://www.facebook.com/mdshakibkhan.dev"
           >
-            <FaFacebook className=" hover:text-cyan-500 mx-2 my-2" size={20} />
+            <FaFacebook className=" hover:text-[#4267B2] mx-2 my-2" size={20} />
           </a>
           <a
+            target="_blank"
             className="text-zinc-500 text-sm relative"
-            href="https://www.facebook.com/mdshakibkhan.dev"
+            href="https://www.instagram.com/mdshakibkhan.dev/"
           >
-            <FaInstagram className=" hover:text-cyan-500 mx-2 my-2" size={20} />
+            <FaInstagram className=" hover:text-[#fa7e1e] mx-2 my-2" size={20} />
           </a>
           <a
+            target="_blank"
             className="text-zinc-500 text-sm relative"
-            href="https://www.facebook.com/mdshakibkhan.dev"
+            href="https://www.linkedin.com/in/md-shakib-khan/"
           >
-            <FaLinkedin className=" hover:text-cyan-500 mx-2 my-2" size={20} />
+            <FaLinkedin className=" hover:text-[#0e76a8] mx-2 my-2" size={20} />
           </a>
           <a
+            target="_blank"
             className="text-zinc-500 text-sm relative"
-            href="https://www.facebook.com/mdshakibkhan.dev"
+            href="https://www.x.com/mdshakibkhan69/"
           >
             <FaSquareXTwitter
-              className=" hover:text-cyan-500 mx-2 my-2"
+              className=" hover:text-white mx-2 my-2"
               size={20}
             />
           </a>
