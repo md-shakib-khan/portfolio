@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="block relative lg:flex max-w-5xl mx-auto mt-10 md:mt-20 px-8">
       <div className="mr-4">
         <h1 className="font-bold text-3xl md:text-5xl leading-tight text-zinc-50 max-w-3xl">
-          Trust me, I'm a
+          Trust me, I am a
           <span className="text-cyan-500"> software engineer.</span>
         </h1>
         <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 leading-loose tracking-wide">
