@@ -1,17 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CgMenuLeftAlt } from "react-icons/cg";
+
+import DropDownMenu from "./DropDownMenu";
 export default function Header() {
   const menus = [
-    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Blogs", href: "/blogs" },
-
     { label: "Contact", href: "/contact" },
-
+    { label: "Gallery", href: "/gallery" },
     { label: "Projects", href: "/projects" },
-
-    { label: "Blog", href: "/blog" },
   ];
   return (
     <header className="flex flex-row items-center justify-between sm:justify-between py-8 max-w-5xl mx-auto relative z-[100] px-8">
@@ -78,7 +75,7 @@ export default function Header() {
             <span className="font-inter font-bold">MD Shakib Khan</span>
           </Link>
           <div className="cursor-pointer">
-            <CgMenuLeftAlt size={25} />
+            <DropDownMenu menus={menus} />
           </div>
         </div>
       </div>
