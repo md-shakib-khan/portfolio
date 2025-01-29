@@ -6,7 +6,7 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 export default function Hero() {
   return (
     <div className="block relative lg:flex max-w-5xl mx-auto mt-10 md:mt-20 px-8">
-      <div className="mr-4">
+      <div className="mr-4 flex flex-col items-center">
         <h1 className="text-xl font-bold text-transparent bg-clip-text text-cyan-600 shadow-lg hover:scale-110 transform transition duration-500 ease-in-out">
           ~ Hello
         </h1>
