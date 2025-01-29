@@ -22,27 +22,26 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
-  height: 10px; /* Height of the scrollbar (for horizontal scrolling) */
+  width: 8px; /* Slim width */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Light background for the scrollbar track */
+  background: #2d2d2d; /* Dark zinc-800 background for the track */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient color for the scrollbar thumb */
+  background: #4b4b4b; /* Lighter zinc color for the thumb */
   border-radius: 10px;
-  border: 2px solid #fff; /* White border around the thumb for contrast */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+  border: 2px solid rgba(75, 75, 75, 0.6); /* Zinc-700/60 border */
+  transition: background 0.3s ease; /* Smooth transition */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
+  background: #3a3a3a; /* Slightly darker zinc shade on hover */
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: #3b2a45; /* Darker shade when the thumb is clicked */
+  background: #2f2f2f; /* Even darker shade when active */
 }
