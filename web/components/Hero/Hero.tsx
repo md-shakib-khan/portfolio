@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export default function Hero() {
   return (
@@ -14,14 +15,27 @@ export default function Hero() {
           I am a<span className="text-cyan-500"> Web Developer</span>
         </h1>
         <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 leading-loose tracking-wide">
-        Meet MD Shakib Khan, a dedicated and passionate student with a strong focus on Web Development and Machine Learning. With a solid foundation in science and a keen curiosity for technology, Shakib is constantly learning and evolving to explore innovative solutions and create meaningful digital experiences. His journey combines the creative aspects of web development with the analytical depth of AI, aiming to bridge the gap between functionality and intelligence in his projects. 
-        {/* Always eager to grow and share knowledge, Shakib is focused on contributing to the tech world through continuous exploration and learning. */}
+          Meet MD Shakib Khan, a dedicated and passionate student with a strong
+          focus on Web Development and Machine Learning. With a solid foundation
+          in science and a keen curiosity for technology, Shakib is constantly
+          learning and evolving to explore innovative solutions and create
+          meaningful digital experiences. His journey combines the creative
+          aspects of web development with the analytical depth of AI, aiming to
+          bridge the gap between functionality and intelligence in his projects.
+          {/* Always eager to grow and share knowledge, Shakib is focused on contributing to the tech world through continuous exploration and learning. */}
         </p>
         <p className="text-zinc-600 text-sm my-4">~ ChatGPT</p>
 
-        <button className="text-white bg-blue-500 hover:bg-blue-600 px-10 py-3 rounded-md">
-          Join To WhatsApp
-        </button>
+        <HoverBorderGradient
+          containerClassName="rounded-xl"
+          as="button"
+          className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+        >
+          Contact To WhatsApp
+        </HoverBorderGradient>
+        {/* <button className="text-white bg-blue-500 hover:bg-blue-600 px-10 py-3 rounded-md">
+          
+        </button> */}
       </div>
       <div className="mt-4 lg:mt-0">
         <Image
