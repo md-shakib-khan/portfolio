@@ -1,17 +1,16 @@
-import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { CompareDemo } from "./CompareDemo";
 
 export default function Hero() {
   return (
     <div className="block relative lg:flex max-w-5xl mx-auto mt-10 md:mt-10 px-8">
       <div className="mr-4 flex flex-col items-center">
-
         <div>
-        <h1 className="text-xl font-bold bg-clip-text text-cyan-600 shadow-lg hover:scale-110 transform transition duration-500 ease-in-out">
-          ~ Hello
-        </h1>
+          <h1 className="text-xl font-bold bg-clip-text text-cyan-600 shadow-lg hover:scale-110 transform transition duration-500 ease-in-out">
+            ~ Hello
+          </h1>
           <h1 className="font-bold text-3xl md:text-5xl leading-tight text-zinc-50 max-w-3xl">
             I am a<span className="text-cyan-500"> Web Developer</span>
           </h1>
@@ -42,13 +41,15 @@ export default function Hero() {
         </button> */}
       </div>
       <div className="mt-4 lg:mt-0 flex flex-col items-center">
-        <Image
+        {/* <Image
           src={"/sk.png"}
           width={500}
           height={500}
           alt="Shakib Khan"
           className="transition duration-500  blur-0 scale-100 rounded-2xl"
-        />
+        /> */}
+        <CompareDemo />
+
         <div className="flex  md:justify-center space-x-2 mt-2">
           <a
             target="_blank"

@@ -9,6 +9,7 @@ export default function Header() {
     { label: "Contact", href: "/contact" },
     { label: "Gallery", href: "/gallery" },
     { label: "Projects", href: "/projects" },
+    { label: "Waitlist", href: "/waitlist" },
   ];
   return (
     <header className="flex flex-row items-center justify-between sm:justify-between py-8 max-w-5xl mx-auto relative z-[100] px-8">

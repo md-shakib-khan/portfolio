@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Header from "../Header/Header";
+import { BackgroundBeams } from "../ui/background-beams";
 
 export default function Layout(props: { children: React.ReactNode }) {
   return (
@@ -8,6 +9,7 @@ export default function Layout(props: { children: React.ReactNode }) {
         <Header />
         {props.children}
       </main>
+      <BackgroundBeams />
     </Fragment>
   );
 }
