@@ -25,19 +25,20 @@ export default function Hero() {
           {/* Always eager to grow and share knowledge, Shakib is focused on contributing to the tech world through continuous exploration and learning. */}
         </p>
         <p className="text-zinc-600 text-sm my-4">~ ChatGPT</p>
-
-        <HoverBorderGradient
-          containerClassName="rounded-xl"
-          as="button"
-          className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-        >
-          Contact To WhatsApp
-        </HoverBorderGradient>
+        <a target="_blank" href="https://wa.me/+8801736906597">
+          <HoverBorderGradient
+            containerClassName="rounded-xl"
+            as="button"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+          >
+            Contact To WhatsApp
+          </HoverBorderGradient>
+        </a>
         {/* <button className="text-white bg-blue-500 hover:bg-blue-600 px-10 py-3 rounded-md">
           
         </button> */}
-      </div>
-      <div className="mt-4 lg:mt-0">
+      </div> 
+      <div className="mt-4 lg:mt-0 flex flex-col items-center">
         <Image
           src={"/sk.png"}
           width={500}
@@ -45,7 +46,7 @@ export default function Hero() {
           alt="Shakib Khan"
           className="transition duration-500  blur-0 scale-100 rounded-2xl"
         />
-        <div className="flex flex-row justify-start md:justify-center space-x-2 mt-2">
+        <div className="flex  md:justify-center space-x-2 mt-2">
           <a
             target="_blank"
             className="text-zinc-500 text-sm relative"
