@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 export default function Layout(props: { children: React.ReactNode }) {
   return (
     <Fragment>
-      <main className="max-w-5xl m-auto h-auto">
+      <main className="max-w-5xl m-auto h-auto select-none">
         <Header />
         {props.children}
       </main>
