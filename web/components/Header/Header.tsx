@@ -1,6 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CgMenuLeftAlt } from "react-icons/cg";
 export default function Header() {
+  const menus = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Blogs", href: "/blogs" },
+
+    { label: "Contact", href: "/contact" },
+
+    { label: "Projects", href: "/projects" },
+
+    { label: "Blog", href: "/blog" },
+  ];
   return (
     <header className="flex flex-row items-center justify-between sm:justify-between py-8 max-w-5xl mx-auto relative z-[100] px-8">
       <div className="hidden lg:flex w-full justify-between">
@@ -18,7 +30,18 @@ export default function Header() {
             />
             <span className="font-inter font-bold">MD Shakib Khan</span>
           </Link>
-          <Link href={"/about"} className="text-white text-sm relative">
+          {menus.map((menu) => (
+            <Link
+              href={menu.href}
+              key={menu.label}
+              className="text-white text-sm relative"
+            >
+              <span className="relative z-10 px-2 py-2 inline-block">
+                {menu.label}
+              </span>
+            </Link>
+          ))}
+          {/* <Link href={"/about"} className="text-white text-sm relative">
             <span className="relative z-10 px-2 py-2 inline-block">About</span>
           </Link>
           <Link href={"/blogs"} className="text-white text-sm relative">
@@ -36,10 +59,29 @@ export default function Header() {
           </Link>
           <Link href={"/"} className="text-white text-sm relative">
             <span className="relative z-10 px-2 py-2 inline-block">Cohort</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
-      <div className="flex lg:hidden w-full"></div>
+      <div className="flex lg:hidden w-full">
+        <div className="w-full flex justify-between">
+          <Link
+            href={"/"}
+            className="font-bold text-sm flex items-center justify-center text-white space-x-2"
+          >
+            <Image
+              src={"/sk.png"}
+              alt="Shakib Khan"
+              width={30}
+              height={30}
+              className="transition duration-500  blur-0 scale-100 rounded-full "
+            />
+            <span className="font-inter font-bold">MD Shakib Khan</span>
+          </Link>
+          <div className="cursor-pointer">
+            <CgMenuLeftAlt size={25} />
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
