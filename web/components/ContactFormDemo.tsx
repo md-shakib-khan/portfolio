@@ -8,6 +8,7 @@ import {
   IconBrandGoogle,
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
+import { Textarea } from "@mantine/core";
 
 export function ContactFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,8 +21,7 @@ export function ContactFormDemo() {
         Get In Touch
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
+        Hey There, If you want to get in touch with me, Please fill this form
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
@@ -40,8 +40,9 @@ export function ContactFormDemo() {
           <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
-          <Input id="password" placeholder="••••••••" type="password" />
+          <Label htmlFor="message">Message</Label>
+          {/* <Input id="message" placeholder="Enter Your Message" type="text"/> */}
+          <Textarea id="message" placeholder="Enter Your Message" />
         </LabelInputContainer>
 
         <button
