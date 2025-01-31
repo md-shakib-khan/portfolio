@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Admin() {
   return (
-    <div>page</div>
+    <div>This is not For All</div>
   )
 }
