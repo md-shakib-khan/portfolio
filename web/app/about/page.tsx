@@ -1,6 +1,13 @@
 import Layout from "@/components/Layout/Layout";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About | MD Shakib Khan - Web Developer",
+  description:
+    "Hey! I'm Shakib Khan and I'm a full stack web developer.",
+};
 
 export default function About() {
   return (
