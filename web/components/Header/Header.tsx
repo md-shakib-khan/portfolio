@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="flex flex-row items-center justify-between sm:justify-between py-8 max-w-5xl mx-auto relative z-[100] px-8">
       <div className="hidden lg:flex w-full justify-between">
-        <div className="flex flex-row space-x-8 items-center antialiased border px-4 py-2 rounded-2xl border-zinc-700/60 bg-zinc-800">
+        <div className="flex flex-row space-x-4 items-center antialiased border px-4 py-2 rounded-2xl border-zinc-700/60 bg-zinc-800">
           <Link
             href={"/"}
             className="font-bold text-sm flex items-center justify-center text-white space-x-2"
@@ -32,7 +32,7 @@ export default function Header() {
             <Link
               href={menu.href}
               key={menu.label}
-              className="text-white text-sm relative"
+              className="text-white text-sm relative hover:bg-zinc-700 rounded-lg px-3"
             >
               <span className="relative z-10 px-2 py-2 inline-block">
                 {menu.label}
