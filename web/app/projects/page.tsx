@@ -7,7 +7,7 @@ export default function Projects() {
     <div>
       <Header />
       <HeroParallaxDemo />
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
       {/* <h1>Hello</h1> */}
     </div>
   );

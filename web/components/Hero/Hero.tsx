@@ -1,15 +1,41 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareFacebook, FaSquareGithub, FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { CompareDemo } from "./CompareDemo";
 import Image from "next/image";
 
 export default function Hero() {
+
+  const socialMedias = [
+    {
+      icon: <FaSquareFacebook className=" hover:text-[#4267B2] mx-2 my-2" size={20} />,
+      href: "https://www.facebook.com/mdshakibkhan/",
+    },
+    {
+      icon: <FaSquareInstagram className="hover:text-[#fa7e1e] mx-2 my-2" size={20} />,
+      href: "https://www.instagram.com/mdshakibkhan/",
+    },
+    {
+      icon: <FaLinkedin className="hover:text-[#0077B5] mx-2 my-2" size={20} />,
+      href: "https://www.linkedin.com/in/mdshakibkhan/",
+    },
+    {
+      icon: <FaSquareGithub className="hover:text-[#fff] mx-2 my-2" size={20} />,
+      href: "https://github.com/mdshakibkhan",
+    },
+    {
+      icon: <FaSquareXTwitter className="hover:text-[#fff] mx-2 my-2" size={20} />,
+      href: "https://twitter.com/mdshakibkhan",
+    }
+  ]
+
+
+
   return (
     <div className="block relative lg:flex max-w-5xl mx-auto mt-10 md:mt-10 px-8">
       <div className="mr-4 flex flex-col items-center">
         <div>
-          <h1 className="text-xl font-bold bg-clip-text text-cyan-600 shadow-lg hover:scale-110 transform transition duration-500 ease-in-out">
+          <h1 className="text-xl font-bold bg-clip-text text-cyan-100 shadow-lg">
             ~ Hello
           </h1>
           <h1 className="font-bold text-3xl md:text-5xl leading-tight text-zinc-50 max-w-3xl">
@@ -54,7 +80,19 @@ export default function Hero() {
 
 
         <div className="flex  md:justify-center space-x-2 mt-2">
-          <a
+          {
+            socialMedias.map((socialMedia, index) => (
+              <a
+                key={index}
+                target="_blank"
+                className="text-zinc-500 text-sm relative"
+                href={socialMedia.href}
+              >
+                {socialMedia.icon}
+              </a>
+            ))
+          }
+          {/* <a
             target="_blank"
             className="text-zinc-500 text-sm relative"
             href="https://www.facebook.com/mdshakibkhan.dev"
@@ -88,6 +126,16 @@ export default function Hero() {
               size={20}
             />
           </a>
+          <a
+            target="_blank"
+            className="text-zinc-500 text-sm relative"
+            href="https://github.com/md-shakib-khan"
+          >
+            <FaSquareGithub
+              className=" hover:text-white mx-2 my-2"
+              size={20}
+            />
+          </a> */}
         </div>
       </div>
     </div>
