@@ -16,7 +16,8 @@ const eslintConfig = [
       "@typescript-eslint/no-unused-vars": "off", // ✅ Disable rule
       "@typescript-eslint/no-explicit-any": "off", // ✅ Disable rule
       "react-hooks/exhaustive-deps" : "off",
-      "react-hooks/exhaustive-deps" : "off"
+      "react-hooks/exhaustive-deps" : "off",
+      "@typescript-eslint/no-empty-object-type" : "off"
     },
   },
 ];
