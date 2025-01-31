@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "aceternity.com", 
+      },
+      {
+        protocol: "https",
+        hostname: "assets.aceternity.com", 
       }
     ]
   }
