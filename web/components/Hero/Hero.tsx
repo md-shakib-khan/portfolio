@@ -2,6 +2,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { CompareDemo } from "./CompareDemo";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -41,14 +42,16 @@ export default function Hero() {
         </button> */}
       </div>
       <div className="mt-4 lg:mt-0 flex flex-col items-center">
-        {/* <Image
+        <Image
           src={"/sk.png"}
           width={500}
           height={500}
           alt="Shakib Khan"
           className="transition duration-500  blur-0 scale-100 rounded-2xl"
-        /> */}
-        <CompareDemo />
+        />
+        {/* <CompareDemo /> */}
+
+
 
         <div className="flex  md:justify-center space-x-2 mt-2">
           <a
