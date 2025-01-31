@@ -18,7 +18,7 @@ export default function SocialMediaIcons() {
         },
         {
           icon: <FaSquareGithub className="hover:text-[#fff] mx-2 my-2" size={20} />,
-          href: "https://github.com/mdshakibkhan",
+          href: "https://github.com/md-shakib-khan",
         },
         {
           icon: <FaSquareXTwitter className="hover:text-[#fff] mx-2 my-2" size={20} />,
