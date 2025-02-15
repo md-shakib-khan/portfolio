@@ -41,7 +41,7 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
 
-      <body className="bg-black">
+      <body className="">
         <GlobalContextProvider>{children}</GlobalContextProvider>
       </body>
     </html>

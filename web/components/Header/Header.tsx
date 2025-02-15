@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { useGlobalContext } from "@/context/GlobalContextProvider";
 import { Switch } from "@mantine/core";
 import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import DropDownMenu from "./DropDownMenu";
 export default function Header() {
+  const { theme, setTheme } = useGlobalContext();
   const menus = [
     { label: "About", href: "/about" },
     { label: "Blogs", href: "/blogs" },
@@ -13,13 +15,31 @@ export default function Header() {
     { label: "Projects", href: "/projects" },
     { label: "Waitlist", href: "/waitlist" },
   ];
+
+  const toggleTheme = (e: any) => {
+    if (theme === "light") {
+      setTheme("dark");
+      localStorage.setItem("theme-2025", "dark");
+    } else {
+      setTheme("light");
+      localStorage.setItem("theme-2025", "light");
+    }
+  };
   return (
     <header className="flex flex-row items-center justify-between sm:justify-between py-8 max-w-5xl mx-auto relative z-[100] px-8">
       <div className="hidden lg:flex w-full justify-between">
-        <div className="flex flex-row space-x-4 items-center antialiased border px-4 py-2 rounded-2xl border-zinc-700/60 bg-zinc-800">
+        <div
+          className={`flex flex-row space-x-4 items-center antialiased border px-4 py-2 rounded-2xl  ${
+            theme === "dark"
+              ? "bg-zinc-800  border-zinc-700/60"
+              : "bg-white shadow-xl"
+          }`}
+        >
           <Link
             href={"/"}
-            className="font-bold text-sm flex items-center justify-center text-white space-x-2"
+            className={`font-bold text-sm flex items-center justify-center  space-x-2 ${
+              theme === "dark" ? "text-white" : "text-zinc-900"
+            }`}
           >
             <Image
               src={"/sk.png"}
@@ -34,7 +54,9 @@ export default function Header() {
             <Link
               href={menu.href}
               key={menu.label}
-              className="text-white text-sm relative hover:bg-zinc-700 rounded-lg px-3"
+              className={`text-sm relative rounded-lg px-3 ${
+                theme === "dark" ? "text-white hover:bg-zinc-700 " : "text-black hover:bg-zinc-100 "
+              }`}
             >
               <span className="relative z-10 px-2 py-2 inline-block">
                 {menu.label}
@@ -44,19 +66,36 @@ export default function Header() {
           <Switch
             size="md"
             color="dark.4"
+            onChange={(e) => toggleTheme(e)}
             onLabel={
-              <IconSun
-                size={16}
-                stroke={2.5}
-                color="var(--mantine-color-yellow-4)"
-              />
+              theme === "light" ? (
+                <IconSun
+                  size={16}
+                  stroke={2.5}
+                  color="var(--mantine-color-yellow-4)"
+                />
+              ) : (
+                <IconMoonStars
+                  size={16}
+                  stroke={2.5}
+                  color="var(--mantine-color-blue-6)"
+                />
+              )
             }
             offLabel={
-              <IconMoonStars
-                size={16}
-                stroke={2.5}
-                color="var(--mantine-color-blue-6)"
-              />
+              theme != "dark" ? (
+                <IconSun
+                  size={16}
+                  stroke={2.5}
+                  color="var(--mantine-color-yellow-4)"
+                />
+              ) : (
+                <IconMoonStars
+                  size={16}
+                  stroke={2.5}
+                  color="var(--mantine-color-blue-6)"
+                />
+              )
             }
           />
           {/* <Link href={"/about"} className="text-white text-sm relative">

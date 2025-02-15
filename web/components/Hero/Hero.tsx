@@ -1,25 +1,33 @@
-
-import { HoverBorderGradient } from "../ui/hover-border-gradient";
-import { CompareDemo } from "./CompareDemo";
+import { useGlobalContext } from "@/context/GlobalContextProvider";
 import Image from "next/image";
 import SocialMediaIcons from "../SocialMediaIcons";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export default function Hero() {
-
-
-
-
+  const { theme } = useGlobalContext();
   return (
     <div className="block relative lg:flex max-w-5xl mx-auto mt-10 md:mt-10 px-8">
       <div className="mr-4 flex flex-col items-center">
         <div>
-          <h1 className="text-xl font-bold bg-clip-text text-cyan-100 shadow-lg">
+          <h1
+            className={`"text-xl font-bold bg-clip-text text-cyan-100 shadow-lg" ${
+              theme == "dark" ? "text-cyan-100" : "text-cyan-800"
+            }`}
+          >
             ~ Hello
           </h1>
-          <h1 className="font-bold text-3xl md:text-5xl leading-tight text-zinc-50 max-w-3xl">
+          <h1
+            className={`"font-bold text-3xl md:text-5xl leading-tight  max-w-3xl" ${
+              theme === "dark" ? "text-zinc-50" : "text-zinc-900"
+            }`}
+          >
             I am a<span className="text-cyan-500"> Web Developer</span>
           </h1>
-          <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 leading-loose tracking-wide">
+          <p
+            className={`" text-sm md:text-base max-w-2xl mt-8 leading-loose tracking-wide" ${
+              theme === "dark" ? "text-zinc-400" : "text-zinc-700"
+            }`}
+          >
             Meet MD Shakib Khan, a dedicated and passionate student with a
             strong focus on Web Development and Machine Learning. With a solid
             foundation in science and a keen curiosity for technology, Shakib is
@@ -55,9 +63,7 @@ export default function Hero() {
         />
         {/* <CompareDemo /> */}
 
-
-
-    <SocialMediaIcons />
+        <SocialMediaIcons />
       </div>
     </div>
   );
