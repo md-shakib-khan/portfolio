@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Switch } from "@mantine/core";
+import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import DropDownMenu from "./DropDownMenu";
 export default function Header() {
   const menus = [
     { label: "About", href: "/about" },
     { label: "Blogs", href: "/blogs" },
     { label: "Contact", href: "/contact" },
-    { label: "Gallery", href: "/gallery" },
+    // { label: "Gallery", href: "/gallery" },
     { label: "Projects", href: "/projects" },
     { label: "Waitlist", href: "/waitlist" },
   ];
@@ -39,6 +41,24 @@ export default function Header() {
               </span>
             </Link>
           ))}
+          <Switch
+            size="md"
+            color="dark.4"
+            onLabel={
+              <IconSun
+                size={16}
+                stroke={2.5}
+                color="var(--mantine-color-yellow-4)"
+              />
+            }
+            offLabel={
+              <IconMoonStars
+                size={16}
+                stroke={2.5}
+                color="var(--mantine-color-blue-6)"
+              />
+            }
+          />
           {/* <Link href={"/about"} className="text-white text-sm relative">
             <span className="relative z-10 px-2 py-2 inline-block">About</span>
           </Link>
