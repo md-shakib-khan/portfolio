@@ -9,6 +9,6 @@ Clone The Repository using
 
 The Go to The Folder. And Then Go to the web to run the web .
 Run `npm install` For install all packages
- You can use `npm run dev` to run the frontend application.
+You can use `npm run dev` to run the frontend application.
 
 
