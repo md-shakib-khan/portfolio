@@ -7,6 +7,8 @@ Fork The Repository using Fork Button on GitHub
 Clone The Repository using
 `git clone <url> <folder>`
 
-The Go to The Folder. And Then Go to the web to run the web . You can use `npm run dev` to run the frontend application.
+The Go to The Folder. And Then Go to the web to run the web .
+Run `npm install` For install all packages
+ You can use `npm run dev` to run the frontend application.
 
 
