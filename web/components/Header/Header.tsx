@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,7 +56,9 @@ export default function Header() {
               href={menu.href}
               key={menu.label}
               className={`text-sm relative rounded-lg px-3 ${
-                theme === "dark" ? "text-white hover:bg-zinc-700 " : "text-black hover:bg-zinc-100 "
+                theme === "dark"
+                  ? "text-white hover:bg-zinc-700 "
+                  : "text-black hover:bg-zinc-100 "
               }`}
             >
               <span className="relative z-10 px-2 py-2 inline-block">
@@ -124,7 +126,9 @@ export default function Header() {
         <div className="w-full flex justify-between">
           <Link
             href={"/"}
-            className="font-bold text-sm flex items-center justify-center text-white space-x-2"
+            className={`"font-bold text-sm flex items-center justify-center " ${
+              theme === "dark" ? "text-white space-x-2" : "text-black space-x-2"
+            }`}
           >
             <Image
               src={"/sk.png"}

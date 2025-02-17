@@ -1,4 +1,5 @@
 "use client";
+import { useGlobalContext } from "@/context/GlobalContextProvider";
 import { Menu } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import Link from "next/link";
@@ -11,19 +12,20 @@ type MenuItem = {
 };
 
 export default function DropDownMenu({ menus }: { menus: MenuItem[] }) {
+  const {theme} = useGlobalContext()
   const matches = useMediaQuery("(max-width: 64rem)");
   return (
     <div>
       {matches ? (
         <Menu>
           <Menu.Target>
-            <CgMenuLeftAlt size={25} />
+            <CgMenuLeftAlt size={25} color={`${theme === "dark" ? "white" : "black"}`}/>
           </Menu.Target>
           <Menu.Dropdown>
             {menus.map((menu: MenuItem) => (
               <Menu.Item
                 key={menu.label}
-                leftSection={<TbLayoutGridAdd size={14} />}
+                leftSection={<TbLayoutGridAdd size={14}/>}
               >
                 <Link href={menu.href}>
                   <span>{menu.label}</span>
