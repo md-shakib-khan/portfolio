@@ -1,6 +1,5 @@
-import { cn } from "@/lib/utils";
-import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+"use client";
+import { useGlobalContext } from "@/context/GlobalContextProvider";
 import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
@@ -10,6 +9,7 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
 export function BentoGridDemo() {
   return (
@@ -27,9 +27,18 @@ export function BentoGridDemo() {
     </BentoGrid>
   );
 }
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
+const Skeleton = () => {
+  const { theme } = useGlobalContext();
+  return (
+    <div
+      className={`"flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br " ${
+        theme === "dark"
+          ? "from-neutral-900 to-neutral-800"
+          : "from-neutral-200  to-neutral-100"
+      }`}
+    ></div>
+  );
+};
 const items = [
   {
     title: "The Dawn of Innovation",
